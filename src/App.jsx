@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     const getData = async () => {
       setLoading(true)
-      const response = await axios.get(`http://localhost:3005/radiobases${regionSelected ? `?region=${regionSelected}` : ''}`)
+      const response = await axios.get(`https://radiobasesjs.herokuapp.com/radiobases${regionSelected ? `?region=${regionSelected}` : ''}`)
       setLoading(false)
       const { data } = response
       setData(data)

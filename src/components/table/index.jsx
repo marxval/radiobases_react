@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useTable, useBlockLayout, useFilters } from 'react-table'
 import { FixedSizeList } from 'react-window'
 import scrollbarWidth from './scrollbarWidth'
 import { ColumnFilter } from './ColumnFilter.jsx'
-
 const Styles = styled.div`
   padding: 1rem;
 
@@ -108,15 +107,12 @@ function Table({ columns, data }) {
                     <div {...headerGroup.getHeaderGroupProps()} className="tr">
                         {headerGroup.headers.map(column => {
                             return (
-                                <>
-                                    <div {...column.getHeaderProps()} className="th">
-                                        {column.render('Header')}
-                                        <div>
-                                            {column.canFilter ? column.render('Filter') : null}
-                                        </div>
+                                <div {...column.getHeaderProps()} className="th">
+                                    {column.render('Header')}
+                                    <div>
+                                        {column.canFilter ? column.render('Filter') : null}
                                     </div>
-
-                                </>
+                                </div>
                             )
                         }
                         )}

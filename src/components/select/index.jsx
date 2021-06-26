@@ -24,7 +24,7 @@ const SelectComponent = ({ setSelected, loading }) => {
 
     useEffect(() => {
         const getData = async () => {
-            const response = await axios.get('http://localhost:3005/regions')
+            const response = await axios.get('https://radiobasesjs.herokuapp.com/regions')
             const { data } = response
             setRegions(data)
         }
