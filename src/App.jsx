@@ -8,12 +8,12 @@ import Table from './components/table/index.jsx'
 import Loader from './components/loader/index.jsx'
 
 const Container = styled.div`
-  display:flex;
+  display:inline-flex;
   flex-direction:column;
-  min-height:100vh;
   justify-content:center;
   align-items:center;
-  width:100%;
+  min-height:100vh;
+  min-width:100%;
 `
 function App() {
   const [tableData, setData] = useState(null);

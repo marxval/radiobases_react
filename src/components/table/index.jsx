@@ -13,7 +13,6 @@ const Styles = styled.div`
 
     border-spacing: 0;
     border: 1px solid black;
-
     .tr {
       :last-child {
         .td {
@@ -165,7 +164,7 @@ function App({ tableData }) {
 
     return (
         <Styles>
-            <Table columns={columns} data={bases} style={{ overflow: 'scroll' }} />
+            <Table columns={columns} data={bases} />
         </Styles>
     )
 }
